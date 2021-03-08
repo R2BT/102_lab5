@@ -1,8 +1,8 @@
 #include<stdio.h>
 int main()
 {
-    int n,i,check,j,x;;
-    int sum;
+    int n,i,j,x;;
+    int sum=0;
     int ugly[3]= {2,3,5};
     scanf("%d",&n);
     i=1;

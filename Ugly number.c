@@ -1,34 +1,37 @@
 #include<stdio.h>
 int main()
 {
-    int n,i,check,j;
-    int ugly[100]= {};
+    int n,i,check,j,x;;
+    int sum;
+    int ugly[3]= {2,3,5};
     scanf("%d",&n);
     i=1;
-    j=0;
-    while(i<=n)
+    x=0;
+    while(1)
     {
-        if(i%2==0||i%3==0||i%5==0)
+        j=i;
+        while(x<3)
         {
-            ugly[j]=i;
-            printf("%d",ugly[j]);
+            if(j%ugly[x]==0)
+            {
+                j=j/ugly[x];
+            }
+            else
+            {
+                x++;
+            }
+        }
+        x=0;
+        if(j==1)
+        {
+            sum++;
+            if(sum==n)
+            {
+                printf("%d",i);
+                break;
+            }
         }
         i++;
-        j++;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     return 0;
 }

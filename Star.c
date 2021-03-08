@@ -1,0 +1,51 @@
+#include<stdio.h>
+int main()
+{
+    int n,x,y,z,a;
+    scanf("%d",&n);
+    int p=n/2;
+    if(n%2!=0)
+    {
+        n++;
+        p=(n-1)/2;
+    }
+    for(x=1;x<=(n/2);x++)
+    {
+        for(y=1;y<=(n/2)-x;y++)
+        {
+            printf("_");
+        }
+        printf("*");
+        for(z=1;z<=(x-1)*2-1;z++)
+        {
+            printf("_");
+        }
+        if(x!=1)
+            printf("*");
+        for(a=1;a<=(n/2)-x;a++)
+        {
+            printf("_");
+        }
+        printf("\n");
+    }
+    for(x=p;x>=1;x--)
+    {
+        for(y=1;y<=(n/2)-x;y++)
+        {
+            printf("_");
+        }
+        printf("*");
+        for(z=1;z<=(x-1)*2-1;z++)
+        {
+            printf("_");
+        }
+        if(x!=1)
+            printf("*");
+        for(a=1;a<=(n/2)-x;a++)
+        {
+            printf("_");
+        }
+        printf("\n");
+    }
+    return 0;
+}
